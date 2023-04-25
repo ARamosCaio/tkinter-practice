@@ -15,12 +15,12 @@ class Application(tk.Frame):
         
         self.hi_there = tk.Label(self)
         self.hi_there["text"] = "Generate Test"
-
         self.hi_there.pack(side="top")
-        self.text = tk.Entry()
+        self.geometry = "800x100"
+        self.text = tk.Entry(self.Test())
         self.text.pack()
 
-        self.quit = tk.Button(self, text="QUIT", fg="red",
+        self.quit = tk.Button(self, text="Quit",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
     
@@ -34,5 +34,6 @@ class Application(tk.Frame):
 
 root = tk.Tk()
 root.title('ROOMS')
+
 app = Application(master=root)
 app.mainloop()
