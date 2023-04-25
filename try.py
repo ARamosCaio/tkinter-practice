@@ -13,9 +13,9 @@ class Application(tk.Frame):
 
     def create_widgets(self):
         
-        self.hi_there = tk.Button(self)
+        self.hi_there = tk.Label(self)
         self.hi_there["text"] = "Generate Test"
-        self.hi_there["command"] = self.Test
+
         self.hi_there.pack(side="top")
         self.text = tk.Entry()
         self.text.pack()
