@@ -1,27 +1,23 @@
 from tkinter import *
-import tkinter as tk
-import time
-import sys
+
+
+root = Tk()
+
+class Application():
+    def __init__(self):
+        self.root = root 
+        self.screen_config()
+        root.mainloop()
+
+    def screen_config(self):
+        self.root.title("Cadastro de clientes")
+        self.root.configure(background="#1e3743")
+        self.root.geometry("700x500")
+        self.root.resizable(True, True)
+        self.root.maxsize(width=900, height=700)
+        self.root.minsize(width=400, height=300)
+Application()
 
 
 
-class App(tk.Frame):
-    def __init__(self, master=None):
-        super().__init__(master)
-        self.master = master
-        self.pack()
-        self.write_text()
-        
-    
-    def write_text(self):
-        self.story = tk.Label(self)
-        self.story["textvariable"] = self.tell_story
-        self.story.pack()
-
-    def tell_story(self):
-        print('teste de escrita simples')
-
-root = tk.Tk()
-app = App(master=root)
-app.mainloop()
 
